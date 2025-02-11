@@ -1,0 +1,154 @@
+<!DOCTYPE HTML>
+<!--
+	Stellar by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Generic - Stellar by HTML5 UP</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+                <header id="header">
+                    <h1>IR Search Engine</h1>
+                    <p>Built a search engine from bottom-up</p>
+                </header>
+
+            <!-- Main -->
+                <div id="main">
+
+					<!-- Content -->
+					<!-- Content -->
+					<section id="content" class="main">
+						<h2>Project Overview</h2>
+						<p>
+							This project involved designing and implementing an end-to-end search engine from scratch, 
+							evolving across five phases to improve retrieval accuracy and ranking effectiveness. 
+							The search engine supports various ranking models, incorporates machine learning for ranking optimization, 
+							integrates deep learning for semantic retrieval, and enhances user experience with personalized search.
+						</p>
+			
+						<h2>Phases of Development</h2>
+			
+						<h3>1. Indexing & Retrieval</h3>
+						<p>
+							The first step in building the search engine was implementing an inverted index, the core data structure for 
+							efficient retrieval. This phase involved:
+						</p>
+						<ul>
+							<li>Tokenizing documents and queries to break text into searchable units.</li>
+							<li>Removing stopwords and applying stemming for improved search accuracy.</li>
+							<li>Building a Basic Inverted Index to store term frequencies and document frequency statistics.</li>
+                			<li>Developing a Positional Inverted Index, storing word positions within documents to enable phrase searching and proximity-based retrieval.</li>
+						</ul>
+			
+						<h3>2. Ranking Models</h3>
+						<p>
+							Once indexing was complete, we implemented traditional ranking models to retrieve and score documents 
+							based on query relevance. This included:
+						</p>
+						<ul>
+							<li>BM25 – A probabilistic ranking function balancing term frequency and document length.</li>
+							<li>TF-IDF – A statistical measure that weighs word importance in a document.</li>
+							<li>Pivoted Normalization – A ranking model adjusting term weighting based on document length.</li>
+							<li>Dirichlet Prior Smoothing – A language modeling approach improving ranking by handling term sparsity.</li>
+							<li>WordCountCosineSimilarity – A vector space model measuring word overlap between query and document.</li>
+						</ul>
+			
+						<h3>3. Learning-to-Rank (L2R)</h3>
+						<p>
+							Traditional ranking models provided a baseline, but machine learning-based ranking helped improve retrieval relevance.
+							We trained a LambdaMART (LightGBM-based) model using labeled query-document relevance scores, allowing the system 
+							to learn optimal ranking functions. This phase involved:
+						</p>
+						<ul>
+							<li>Extracting features like document length, TF-IDF scores, and BM25 scores for supervised learning.</li>
+							<li>Training a Learning-to-Rank (L2R) model to optimize ranking effectiveness.</li>
+							<li>Evaluating ranking performance by comparing L2R outputs with traditional rankers.</li>
+						</ul>
+			
+						<h3>4. Deep Learning for IR</h3>
+						<p>
+							To move beyond keyword matching, we incorporated neural ranking models for improved semantic retrieval. 
+							This phase introduced:
+						</p>
+						<ul>
+							<li>Bi-Encoders – Used pre-trained transformer models to encode query and document vectors for similarity comparison.</li>
+							<li>Cross-Encoders – Applied deep learning models for query-document pair scoring.</li>
+							<li>Sentence Transformers – Enhanced document retrieval by capturing contextual meaning beyond exact word matches.</li>
+						</ul>
+			
+						<h3>5. Feedback & Personalization</h3>
+						<p>
+							The final phase aimed to make search results more user-adaptive and personalized. This included:
+						</p>
+						<ul>
+							<li>Implementing query expansion to refine user searches dynamically.</li>
+							<li>Incorporating user interaction data (click-through rates, past queries) for personalized ranking.</li>
+							<li>Adjusting ranking weights based on historical user preferences.</li>
+						</ul>
+			
+						<h2>Key Insights</h2>
+						<ul>
+							<li>Deep learning models significantly improved ranking by understanding query intent rather than relying on exact word matches.</li>
+							<li>Learning-to-Rank allowed data-driven ranking optimization, surpassing traditional methods.</li>
+							<li>Personalization enhanced user engagement by adapting rankings based on search behavior.</li>
+						</ul>
+						<!-- <ul class="actions">
+							<li><a href="https://github.com/sjha132000/Mine-Escape" target="_blank" class="button">GitHub</a></li>
+							<li><a href="https://huggingface.co/spaces/launch/factbench" target="_blank" class="button">GitHub</a></li>
+						</ul> -->
+					</section>
+
+                </div>
+
+				<!-- Footer -->
+				<footer id="footer">
+					<section>
+						<h2>A/B Testing New Possibilities!</h2>
+						<p>Open to collaboration, research, and data-driven problem-solving. Feel free to reach out!</p>
+						<!-- <ul class="actions">
+							<li><a href="generic.html" class="button">Learn More</a></li>
+						</ul> -->
+					</section>
+					<section>
+						<h2>Let's Connect!</h2>
+						<dl class="alt">
+							<dt>Address</dt>
+							<dd>Ann Arbor &bull; MI &bull; USA</dd>
+							<dt>Phone</dt>
+							<dd>(734) 489-4664</dd>
+							<dt>Email</dt>
+							<dd><a href="#">shlokij@umich.edu</a></dd>
+						</dl>
+						<ul class="icons">
+							<li><a href="https://x.com/shlokij?s=11&t=qeYB42VolIpZRP1Ni4sdzg&prefetchTimestamp=1739263766628&mx=2" class="icon brands fa-twitter alt"><span class="label">Twitter</span></a></li>
+							<li><a href="https://github.com/sjha132000" class="icon brands fa-github alt"><span class="label">GitHub</span></a></li>
+							<li><a href="https://www.linkedin.com/in/shloki-jha-7993591a1/" class="icon brands fa-linkedin alt"><span class="label">LinkedIn</span></a></li>
+						</ul>
+					</section>
+					<p class="copyright">&copy; Shloki Jha. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+				</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

@@ -1,0 +1,143 @@
+<!DOCTYPE HTML>
+<!--
+	Stellar by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Generic - Stellar by HTML5 UP</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<h1>Lyrics-Based Search Ranking Analysis</h1>
+						<p>Evaluating ranking models for lyrics-based information retrieval</p>
+					</header>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Content -->
+							<section id="content" class="main">
+								<!-- <span class="image main"><img src="images/pic04.jpg" alt="" /></span> -->
+								<h2>Introduction</h2>
+								<p>Searching for songs using incomplete or paraphrased lyrics is challenging for traditional keyword-based search engines. This project evaluates different ranking models for lyrics-based retrieval, focusing on their effectiveness rather than developing a full search engine.</p>
+								<p>Using a dataset of 50,000 songs, we compared statistical ranking models like BM25, TF-IDF etc with deep learning-based models. Performance was measured using Mean Average Precision (MAP) and Normalized Discounted Cumulative Gain (NDCG) Scores.</p>
+								<h2>Dataset & Preprocessing</h2>
+								<p>The Genius Lyrics Dataset provided 50,000 songs with metadata such as artists, albums, and release dates. We manually labeled 1,000 query-document pairs with relevance scores (1-5) to evaluate ranking models.</p>
+								Preprocessing steps included:
+								<ul>
+									<li><strong>Tokenization:</strong> Processed lyrics with a Regex-based tokenizer</li>
+									<li><strong>Stopword Removal:</strong> Filtered non-informative words</li>
+									<li><strong>Metadata Structuring:</strong> Extracted artist, album, and genre details</li>
+								</ul>
+								<h2>Ranking Models Evaluated</h2>
+								<h3>Traditional Models:</h3>
+								<ul>
+									<li>BM25 – A term frequency-based ranking model that balances term importance and document length.</li>
+									<li>TF-IDF – Weighs word importance in a document relative to the whole dataset..</li>
+									<li>Pivoted Normalization – Adjusts term weighting by normalizing document length.</li>
+									<li>WordCountCosineSimilarity – Measures similarity between query and lyrics using vector-based term overlap.</li>
+								</ul>
+								<h3>Deep Learning Models:</h3>
+								<ul>
+									<li>Siamese BERT – A transformer-based model that captures semantic relationships, improving retrieval for paraphrased lyrics.</li>
+									<li>Latent Semantic Analysis (LSA) – Reduces text to a lower-dimensional space to capture conceptual similarities.</li>
+								</ul>
+								<h2>Evaluation & Results</h2>
+								<p>Ranking models were compared using MAP (measuring ranking quality) and NDCG (giving higher weight to top-ranked relevant results).</p>
+								<table border="1">
+									<tr>
+										<th>Ranker</th>
+										<th>MAP Score</th>
+										<th>NDCG Score</th>
+									</tr>
+									<tr>
+										<td>BM25</td>
+										<td>0.2566</td>
+										<td>0.0269</td>
+									</tr>
+									<tr>
+										<td>TF-IDF</td>
+										<td>0.4268</td>
+										<td>0.0488</td>
+									</tr>
+									<tr>
+										<td>WordCountCosineSimilarity</td>
+										<td>0.3883</td>
+										<td>0.0357</td>
+									</tr>
+									<tr>
+										<td>Siamese BERT</td>
+										<td>0.4972</td>
+										<td>0.0704</td>
+									</tr>
+									<tr>
+										<td>LSA</td>
+										<td>0.3457</td>
+										<td>0.0488</td>
+									</tr>
+								</table>
+								<h3>Key Findings:</h3>
+								<ul>
+									<li>Siamese BERT achieved the highest performance, proving deep learning is more effective for lyrics retrieval.</li>
+									<li>TF-IDF outperformed BM25, highlighting better handling of stopwords and weighting.</li>
+									<li>BM25 struggled with paraphrased lyrics, limiting retrieval effectiveness.</li>
+								</ul>
+								<ul class="actions">
+									<li><a href="/Users/shlokijha/Desktop/html5up-stellar/assets/files/SI 650 Project Report.pdf" target="_blank" class="button">Report</a></li>
+									<!-- <li><a href="https://huggingface.co/spaces/launch/factbench" target="_blank" class="button">GitHub</a></li> -->
+								</ul>
+							</section>
+					</div>
+
+				<!-- Footer -->
+				<footer id="footer">
+					<section>
+						<h2>A/B Testing New Possibilities!</h2>
+						<p>Open to collaboration, research, and data-driven problem-solving. Feel free to reach out!</p>
+						<!-- <ul class="actions">
+							<li><a href="generic.html" class="button">Learn More</a></li>
+						</ul> -->
+					</section>
+					<section>
+						<h2>Let's Connect!</h2>
+						<dl class="alt">
+							<dt>Address</dt>
+							<dd>Ann Arbor &bull; MI &bull; USA</dd>
+							<dt>Phone</dt>
+							<dd>(734) 489-4664</dd>
+							<dt>Email</dt>
+							<dd><a href="#">shlokij@umich.edu</a></dd>
+						</dl>
+						<ul class="icons">
+							<li><a href="https://x.com/shlokij?s=11&t=qeYB42VolIpZRP1Ni4sdzg&prefetchTimestamp=1739263766628&mx=2" class="icon brands fa-twitter alt"><span class="label">Twitter</span></a></li>
+							<li><a href="https://github.com/sjha132000" class="icon brands fa-github alt"><span class="label">GitHub</span></a></li>
+							<li><a href="https://www.linkedin.com/in/shloki-jha-7993591a1/" class="icon brands fa-linkedin alt"><span class="label">LinkedIn</span></a></li>
+						</ul>
+					</section>
+					<p class="copyright">&copy; Shloki Jha. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+				</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
